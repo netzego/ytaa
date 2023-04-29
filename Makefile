@@ -19,7 +19,7 @@ download: $(DOWNLOAD_DIR)
 
 mp3:
 	@mkdir -vp mp3
-	@fd -t f \.opus$$ $(DOWNLOAD_DIR) -x ffmpeg -i {} -vn -ar 44100 -ac 2 -b:a 320k mp3/{/.}.mp3 
+	fd -t f \.opus$$ $(DOWNLOAD_DIR) -x ffmpeg -i {} -vn -ar 44100 -ac 2 -b:a 320k mp3/{/.}.mp3 
 
 $(DOWNLOAD_DIR):
 	@mkdir -p $(DOWNLOAD_DIR)
