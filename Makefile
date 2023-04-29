@@ -5,6 +5,7 @@ OUTPUT_FORMAT := %(title)s.%(ext)s
 
 clean:
 	@rm -fr $(DOWNLOAD_DIR)
+	@rm -fr mp3/
 	@rm $(ARCHIVE_FILE)
 
 download: $(DOWNLOAD_DIR)
