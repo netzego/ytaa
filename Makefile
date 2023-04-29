@@ -26,6 +26,7 @@ $(DOWNLOAD_DIR):
 
 .PHONY: \
 	clean \
-	download
+	download \
+	mp3
 
 .DEFAULT_GOAL := download
