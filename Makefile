@@ -17,7 +17,7 @@ download: $(DOWNLOAD_DIR)
 		"https://youtube.com/$(CHANNEL_NAME)/videos"
 
 $(DOWNLOAD_DIR):
-	mkdir -p $(DOWNLOAD_DIR)
+	@mkdir -p $(DOWNLOAD_DIR)
 
 .PHONY: \
 	clean \
