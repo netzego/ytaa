@@ -1,5 +1,5 @@
-CHANNEL_NAME  := @akuphone
-ARCHIVE_FILE  := audio.log
+CHANNEL_NAME  := $(shell cat user)
+ARCHIVE_FILE  := log
 DOWNLOAD_DIR  := opus
 OUTPUT_FORMAT := %(title)s.%(ext)s
 
