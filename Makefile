@@ -6,7 +6,7 @@ OUTPUT_FORMAT := %(title)s.%(ext)s
 clean:
 	@rm -fr $(DOWNLOAD_DIR)
 	@rm -fr mp3/
-	@[[ -e "$(ARCHIVE_FILE)" ]] && @rm $(ARCHIVE_FILE) || true
+	@[[ -e "$(ARCHIVE_FILE)" ]] && rm $(ARCHIVE_FILE) || true
 
 download: $(DOWNLOAD_DIR)
 	@yt-dlp \
