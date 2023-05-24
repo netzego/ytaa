@@ -1,21 +1,21 @@
 CHANNEL_NAME  != cat user
 ARCHIVE_FILE  := log
-DOWNLOAD_DIR  := opus
+OPUS_DIR      := opus
 OUTPUT_FORMAT := %(title)s.%(ext)s
 MP3_BITRATE   := 320k
 
 clean:
-	@rm -fr $(DOWNLOAD_DIR)
+	@rm -fr $(OPUS_DIR)
 	@rm -fr mp3/
 	@[[ -e "$(ARCHIVE_FILE)" ]] && rm $(ARCHIVE_FILE) || true
 
-download: $(DOWNLOAD_DIR)
+download: | $(OPUS_DIR)
 	@yt-dlp \
 		--restrict-filenames \
 		--extract-audio \
 		--download-archive $(ARCHIVE_FILE) \
 		--output "$(OUTPUT_FORMAT)" \
-		--path $(DOWNLOAD_DIR) \
+		--path $(OPUS_DIR) \
 		"https://youtube.com/$(CHANNEL_NAME)/videos"
 
 mp3:
