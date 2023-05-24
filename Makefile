@@ -23,8 +23,9 @@ mp3:
 	@mkdir -vp mp3
 	@fd -I -t f \.opus$$ ./$(DOWNLOAD_DIR) -x ffmpeg -hide_banner -i {} -vn -ar 44100 -ac 2 -b:a $(MP3_BITRATE) mp3/{/.}.mp3 
 
-$(DOWNLOAD_DIR):
-	@mkdir -p $(DOWNLOAD_DIR)
+$(OPUS_DIR) $(MP3_DIR):
+	@mkdir -p $@
+
 
 .PHONY: \
 	clean \
