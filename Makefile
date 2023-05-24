@@ -1,4 +1,4 @@
-CHANNEL_NAME  := $(shell cat user)
+CHANNEL_NAME  != cat user
 ARCHIVE_FILE  := log
 DOWNLOAD_DIR  := opus
 OUTPUT_FORMAT := %(title)s.%(ext)s
