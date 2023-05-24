@@ -23,7 +23,8 @@ download: | $(OPUS_DIR)
 		"https://youtube.com/$(CHANNEL_NAME)/videos"
 
 $(MP3_DIR)/%.mp3: $(OPUS_DIR)/%.opus | $(MP3_DIR)
-	AV_LOG_FORCE_NOCOLOR=true ffmpeg -hide_banner -i $< -vn -ar 44100 -ac 2 -b:a $(MP3_BITRATE) $@
+	AV_LOG_FORCE_NOCOLOR=true \
+		ffmpeg -hide_banner -i $< -vn -ar 44100 -ac 2 -b:a $(MP3_BITRATE) $@
 
 $(OPUS_DIR) $(MP3_DIR):
 	@mkdir -p $@
