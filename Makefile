@@ -17,6 +17,7 @@ download: | $(OPUS_DIR)
 		--no-colors \
 		--restrict-filenames \
 		--extract-audio \
+		--audio-quality 0 \
 		--download-archive $(ARCHIVE_FILE) \
 		--output "$(OUTPUT_FORMAT)" \
 		--path $(OPUS_DIR) \
