@@ -11,6 +11,7 @@ clean:
 
 download: | $(OPUS_DIR)
 	@yt-dlp \
+		--no-colors \
 		--restrict-filenames \
 		--extract-audio \
 		--download-archive $(ARCHIVE_FILE) \
